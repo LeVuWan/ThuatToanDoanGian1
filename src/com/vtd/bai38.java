@@ -8,25 +8,21 @@ public class bai38 {
 		System.out.print("Nhap n: ");
 		int n = scanner.nextInt();
 
+		int count = 2;
+		int countIdx = 1;
+
 		int i = 2;
 
-		int negativePosition = 2;
-
-		int nextPositon = 3;
-
-		int count = 1;
-
 		while (i <= n) {
-			if (count == negativePosition) {
-				System.out.println(-i + " ");
-				negativePosition = negativePosition + nextPositon;
-				nextPositon++;
+			if (count == countIdx) {
+				count++;
+				countIdx = 1;
+				System.out.print(-i + " ");
 			} else {
-				System.out.println(i + " ");
+				System.out.print(i + " ");
+				countIdx++;
 			}
-
 			i += 2;
-			count++;
 		}
 	}
 }

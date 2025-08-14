@@ -8,7 +8,7 @@ public class bai24 {
 		System.out.print("Enter n: ");
 		int n = scanner.nextInt();
 
-		hinh4(n);
+		hinh3(n);
 	}
 
 	private static void hinh1(int n) {
@@ -38,24 +38,14 @@ public class bai24 {
 	}
 
 	private static void hinh3(int n) {
-		for (int i = 1; i <= n; i++) {
-			for (int j = 1; j <= n; j++) {
-				if (i == 1 || i == n) {
+		for (int row = 1; row <= n; row++) {
+			for (int col = 1; col <= n; col++) {
+				if (row == 1 || row == n) { // Hàng bằng 1 cột bằng bao nhiêu cũng được
 					System.out.print("*");
-					continue;
-				}
-				if (i % 2 == 0) {
-					if (j % 2 == 0) {
-						System.out.print("*");
-					} else {
-						System.out.print(" ");
-					}
+				} else if (row % 2 == 0 && col % 2 == 1 || row % 2 == 1 && col % 2 == 0) {
+					System.out.print("*");
 				} else {
-					if (j % 2 != 0) {
-						System.out.print("*");
-					} else {
-						System.out.print(" ");
-					}
+					System.out.print(" ");
 				}
 			}
 			System.out.println();

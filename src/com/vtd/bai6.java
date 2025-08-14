@@ -23,11 +23,13 @@ public class bai6 {
 	private static void cach2(int n) {
 		int k = 1;
 
-		for (int i = 1; i <= n; i++) {
-			if (i % 2 == 0) {
-				System.out.print(i * k + " ");
-				k = k * -1;
+		for (int i = 2; i <= n; i++) {
+			if (i % 4 == 0) {
+				System.out.print(-i);
+			} else if (i % 2 == 0) {
+				System.out.print(i);
 			}
+			System.out.print(" ");
 		}
 	}
 }
